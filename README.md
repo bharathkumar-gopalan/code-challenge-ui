@@ -1,5 +1,5 @@
 # code-challenge-ui
-A possible solution to the UI code challenge
+
 ### Introduction 
 This repository contains the UI automation code for the challenge . It has a self contained automation framework that was build atop of selenium java binding . It also has a docker file Which installs all the dependencies and runs the test cases(In Chrome at the moment)
 ### Running the test cases 
@@ -20,7 +20,7 @@ __Configuation Steps:__
 
 1. Download Selenium server : Download the selenium standalone server jar from https://www.seleniumhq.org/download/
 2. Download Chrome driver : Download the latest version of the chrome driver from http://chromedriver.chromium.org/downloads ,extract the contents and __copy the chromedriver binary to the same folder containing the selenium standalone server jar file__
-3. Download the firefox driver from https://github.com/mozilla/geckodriver/releases, extract the contents and __copy the firefoxdriver binary to the same folder containing the selenium standalone server jar file_
+3. Download the firefox driver from https://github.com/mozilla/geckodriver/releases, extract the contents and __copy the firefoxdriver binary to the same folder containing the selenium standalone server jar file__
 4. Launch the selenium server in standalone mode with the command __`java -jar <path to the selenium standalone.jar>`__
 
 __Running the Tests:__
@@ -28,3 +28,11 @@ __Running the Tests:__
 The tests can be launched from the command line, First Navigate to the automation-code-challenge base folder 
 1. To run the automation in chrome type __`mvn clean test -Dbrowser=chrome`__
 2. To run the automation in firefox type __`mvn clean test -Dbrowser=firefox`__
+
+#### __Configurable Parameters(Or System Properties)__
+The Framework has three configurable parameters 
+1. __-Dbrowser__(The browser to run the automation on ). The default value is chrome and the allowed options are chrome and firefox) 
+2. __-Denv__(The evironment to run the automaton on). The Default and only allowed value is prod
+3. __-Dserver__(The selenium server URL) . The Default value is http://localhost:4444/wd/hub
+
+For example the command __`mvn clean test -Dbrowser=chrome -Denv=prod -Dserver=http://10.0.192.112:4444/wd/hub`__ will run the automation on chrome , with prod evnironment URL (http://automationpractice.com/index.php) with a selenium server running on the host 10.0.192.112
