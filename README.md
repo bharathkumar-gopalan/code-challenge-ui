@@ -3,7 +3,7 @@
 ### Introduction 
 This repository contains the UI automation code for the challenge . It has a self contained automation framework that was build atop of selenium java binding and uses TestNG. It also has a docker file Which installs all the dependencies and runs the test cases(In Chrome at the moment)
 ### Running the test cases 
-There are two ways to run the test cases , you can use the provided dockerFile or follow the steps given in the section 'Running the Test Locally'
+There are two ways to run the test cases , you can use the provided dockerFile or follow the steps given in the section `Running the Test Locally`
 #### __Using the provided DockerFile__  
 The easiest way is to use the DockerFile provided with this project. Here are the steps 
 1. Please make sure that you have docker installed in your PC.
