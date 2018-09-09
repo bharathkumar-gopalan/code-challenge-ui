@@ -36,3 +36,13 @@ The Framework has three configurable parameters
 3. __-Dserver__(The selenium server URL) . The Default value is http://localhost:4444/wd/hub
 
 For example the command __`mvn clean test -Dbrowser=chrome -Denv=prod -Dserver=http://10.0.192.112:4444/wd/hub`__ will run the automation on chrome , with prod evnironment URL (http://automationpractice.com/index.php) with a selenium server running on the host 10.0.192.112
+
+#### __Other Details__
+1. Logging : The framework uses slf4j and log4j for logging purposes 
+2. Screenshots on failure : To be implemented based on my time availability. 
+3. generation human readable report : The framwork uses default testNG report which will be available in target/surefire-reports . It should be possible to include allure report with configration changes 
+4. Random test data : Currently the framework generates random email , Please have a look at `RandomUtil.java`
+5. Parallel mode : The framework supports grid and parallel execution at suite level 
+6. Ability to run tests for different browsers/OS/Environments by configuring - Please look at the `Configurable Parameters` section 
+7. Environments : The Environment configuration details are at `src/main/resources/environments` folder for environment configuration 
+8. Reading test data from file : The framework supports JSON and CSV file formats . Please have a look at the `src/test/resources/registration` folder for details  
