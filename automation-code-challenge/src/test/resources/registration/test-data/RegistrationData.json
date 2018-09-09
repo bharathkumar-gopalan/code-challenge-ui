@@ -1,0 +1,17 @@
+{  
+   "firstName":"John",
+   "lastName":"hellofresh",
+   "birthDay":"1",
+   "birthMonth":"1",
+   "birthYear":"2000",
+   "company":"Hello Fresh",
+   "address1":"7600 E caley Avenue",
+   "address2":"Englewood",
+   "city":"Centennial",
+   "state":"Colorado",
+   "postcode":"80111",
+   "other":"Other info",
+   "phone":"1234567890",
+   "mobilePhone":"4444444444",
+   "alias":"hf"
+}
