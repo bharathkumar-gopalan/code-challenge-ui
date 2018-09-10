@@ -47,6 +47,13 @@ For example the command __`mvn clean test -Dbrowser=chrome -Denv=prod -Dserver=h
 7. Environments : The Environment configuration details are at `src/main/resources/environments` folder for environment configuration 
 8. Reading test data from file : The framework supports JSON and CSV file formats . Please have a look at the `src/test/resources/registration` folder for details  
 
+#### A note on Assertion messages 
+You might have noticed that the testNG AssertTrue messages are positive , This is done for a reason . For example consider the folowing line 
+`Assert.assertTrue(200 == API_CREATED_CODE, "The API gave a 200 response --");`
+When this fails , TestNG will report as follows 
+
+java.lang.AssertionError: The API gave a 200 response -- expected [true] but found [false]
+
 #### __Libraries used__
 1. SLF4j and SLF4J log4J binding : For logging 
 2. TestNG : Testing framework for running the test cases
