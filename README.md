@@ -2,6 +2,8 @@
 
 ### Introduction 
 This repository contains the UI automation code for the challenge . It has a self contained automation framework that was build atop of selenium java binding and uses TestNG. It also has a docker file Which installs all the dependencies and runs the test cases(In Chrome at the moment)
+### Supported Browsers
+__The Automation is tested in chome and firefox and currently supports only the two browsers__ . It should be possible to add support to other browsers through a small code change
 ### Running the test cases 
 There are two ways to run the test cases , you can use the provided dockerFile or follow the steps given in the section `Running the Test Locally`
 #### __Using the provided DockerFile__  
@@ -39,8 +41,8 @@ For example the command __`mvn clean test -Dbrowser=chrome -Denv=prod -Dserver=h
 
 #### __Other Details__
 1. Logging : The framework uses slf4j and log4j for logging purposes 
-2. Screenshots on failure : To be implemented based on my time availability. 
-3. generation human readable report : The framwork uses default testNG report which will be available in target/surefire-reports . It should be possible to include allure report with configration changes 
+2. Screenshots on failure : Not Implemented , But a listener based approach can be implemented . 
+3. generation human readable report : The framework uses default testNG report which will be available in target/surefire-reports . It should be possible to include allure report with configration changes 
 4. Random test data : Currently the framework generates random email , Please have a look at `RandomUtil.java`
 5. Parallel mode : The framework supports grid and parallel execution at suite level 
 6. Ability to run tests for different browsers/OS/Environments by configuring - Please look at the `Configurable Parameters` section 
