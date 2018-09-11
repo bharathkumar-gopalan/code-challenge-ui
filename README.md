@@ -6,7 +6,9 @@ This repository contains the UI automation code for the challenge . It has a sel
 __The Automation is tested in chome and firefox and currently supports only the two browsers__ . It should be possible to add support to other browsers through a small code change
 ### Running the test cases 
 There are two ways to run the test cases , you can use the provided dockerFile or follow the steps given in the section `Running the Test Locally`
-#### __Using the provided DockerFile__  
+#### __Using the provided DockerFile__
+__NOTE: The Docker execution might be slower than the local execution. This is possibly because it has to download all the dependencies , start the server etc. It also depends on your System configuration__ 
+
 The easiest way is to use the DockerFile provided with this project. Here are the steps 
 1. Please make sure that you have docker installed in your PC.
 2. Download the contents of the docker folder from the repo. You will see two files (DockerFile and startup_script.sh) 
