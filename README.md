@@ -45,7 +45,7 @@ For example the command __`mvn clean test -Dbrowser=chrome -Denv=prod -Dserver=h
 3. generation human readable report : The framework uses default testNG report which will be available in target/surefire-reports . It should be possible to include allure report with configration changes 
 4. Random test data : Currently the framework generates random email , Please have a look at `RandomUtil.java`
 5. Parallel mode : The framework supports grid and parallel execution at suite level 
-6. Ability to run tests for different browsers/OS/Environments by configuring - Please look at the `Configurable Parameters` section 
+6. Ability to run tests for different browsers/OS/Environments by configuring - Please look at the `Configurable Parameters` section. Currently chrome and firefox are supported
 7. Environments : The Environment configuration details are at `src/main/resources/environments` folder for environment configuration 
 8. Reading test data from file : The framework supports JSON and CSV file formats . Please have a look at the `src/test/resources/registration` folder for details  
 
